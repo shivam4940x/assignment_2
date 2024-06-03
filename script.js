@@ -3,21 +3,24 @@ elements.push(...document.querySelectorAll('h3'))
 elements.push(...document.querySelectorAll('h1'))
 elements.push(...document.querySelectorAll('p'));
 
-if (window.innerWidth < 400) return;
+
 elements.forEach(ele=>{
     ele.classList.add("hidden")
 });
 
-const observer = new IntersectionObserver(entities=>{
-    entities.forEach(ent=>{
-        if(ent.isIntersecting){
-            ent.target.classList.add("show")
-        }else{
-            ent.target.classList.remove("show")
-        }
-    })
-})
+if (window.innerWidth > 400){
 
-elements.forEach(ele=>{
-    observer.observe(ele)
-})
+    const observer = new IntersectionObserver(entities=>{
+        entities.forEach(ent=>{
+            if(ent.isIntersecting){
+                ent.target.classList.add("show")
+            }else{
+                ent.target.classList.remove("show")
+            }
+        })
+    })
+    
+    elements.forEach(ele=>{
+        observer.observe(ele)
+    })
+}
