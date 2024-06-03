@@ -10,9 +10,6 @@ body {
 }
 :root {
   --font-clash-display: "Clash Display", sans-serif;
-  --font-plus-jakarta-sans: "Plus Jakarta Sans";
-  --font-dm-sans: "DM Sans";
-  --font-nunito-sans: "Nunito Sans";
   --section_size: 660px;
   --main-heading: 2.5em;
   --color-tomato: #ff5555;
