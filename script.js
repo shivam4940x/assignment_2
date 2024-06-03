@@ -1,8 +1,9 @@
 let elements = [];
 elements.push(...document.querySelectorAll('h3'))
 elements.push(...document.querySelectorAll('h1'))
-elements.push(...document.querySelectorAll('p'))
-console.log(elements)
+elements.push(...document.querySelectorAll('p'));
+
+if (window.innerWidth < 400) return;
 elements.forEach(ele=>{
     ele.classList.add("hidden")
 });
